@@ -31,3 +31,23 @@ var car = "BMW";
 console.log(car);
 car = { brand: "bmw", series: 3 };
 console.log(car);
+//functions
+function returnMyName() {
+    return myName;
+}
+console.log(returnMyName());
+//void type
+function sayHello() {
+    console.log('hello');
+}
+//argument types
+function multiply(value1, value2) {
+    return value1 + value2;
+}
+console.log(multiply(1, 2));
+//function types
+var myMultiply; //its not a function, just a signature
+// myMultiply = sayHello;
+// myMultiply()
+myMultiply = multiply;
+console.log(myMultiply(1, 2));
