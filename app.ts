@@ -67,4 +67,54 @@ let myMultiply: (val1:number, val2:number) => number;//its not a function, just 
 // myMultiply()
 myMultiply = multiply;
 console.log(myMultiply(1,2));
- 
+
+//objects
+let userData: {name:string, age:number} = {
+    name: "max",
+    age:27
+};
+// userData = {}
+//complex object
+
+let complex : {data:number[], output: (all:boolean) => number[]} = {
+    data:[100, 3.99, 10],
+
+    output: function (all:boolean): number[] {
+        return this.data;
+    }
+} 
+
+//type alias
+type Complex = {data:number[], output: (all:boolean) => number[]};
+let complex2: Complex = {
+    data:[100, 3.99, 10],
+    output: function (all:boolean): number[] {
+        return this.data;
+    }
+}
+
+//union types
+let myRealRealAge: number | string = 27;
+myRealRealAge = "27";
+
+//check types
+let finalValue = 20;
+
+if(typeof finalValue == "number"){
+    console.log("final value is a number");
+    
+}
+
+//never
+function neverReturns():never{
+    throw new Error('An error');
+    
+}
+
+//nullable types
+let canBeNull: number | null = 12;
+canBeNull = null;
+let canAlsoBeNull;
+canAlsoBeNull = null;
+
+let thisCanBeAny:any = null;
