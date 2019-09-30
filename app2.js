@@ -88,3 +88,11 @@ canBeNull = null;
 var canAlsoBeNull;
 canAlsoBeNull = null;
 var thisCanBeAny = null;
+//compiler improvements
+function controlMe(isTrue, somethingElse) {
+    var result = 0; //imitializing
+    if (isTrue) {
+        result = 12;
+    }
+    return result;
+}

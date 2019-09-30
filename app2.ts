@@ -118,3 +118,13 @@ let canAlsoBeNull;
 canAlsoBeNull = null;
 
 let thisCanBeAny:any = null;
+
+//compiler improvements
+function controlMe(isTrue:boolean, somethingElse: boolean) {
+    let result: number = 0;//imitializing
+    if (isTrue) {
+        result = 12;
+    }
+
+    return result;
+}
