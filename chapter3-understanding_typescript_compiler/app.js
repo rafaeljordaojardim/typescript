@@ -1,8 +1,8 @@
 "use strict";
 {
-    var myName_1 = "max";
-    var myAge_1 = 27;
-    var anyThing = void 0;
+    let myName = "max";
+    let myAge = 27;
+    let anyThing;
     anyThing = 12;
     anyThing = "assasa";
     // myName= 30;

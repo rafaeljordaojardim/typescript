@@ -108,8 +108,10 @@ console.log(newProject);
 //private constructors
 class OnlyOne {
     private static instance: OnlyOne;
-
-    private constructor(public name:string){}
+    public readonly name: string;
+    private constructor(name:string){
+        this.name = name;
+    }
 
     static getInstance(){
         if (!OnlyOne.instance) {
@@ -122,3 +124,5 @@ class OnlyOne {
 
 // let wrong = new OnlyOne('jsaijids')
 let right = OnlyOne.getInstance()
+console.log(right.name);
+// right.name = 'something else'

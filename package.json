@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "start": "lite-server",
+    "tsc": "tsc --target es5 ./**/*.ts",
+    "build": "webpack -p --watch",
+    "build:prod": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,16 @@
   },
   "homepage": "https://github.com/rafaeljordaojardim/typescript#readme",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
+    "lite-server": "^2.5.4",
+    "systemjs": "0.19.36",
+    "ts-loader": "^6.2.0",
+    
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "typescript": "2.0"
   }
 }

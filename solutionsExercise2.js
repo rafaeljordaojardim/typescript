@@ -1,26 +1,27 @@
+"use strict";
 //exercise 1 -  as arrow function
-var double = function (value) {
+const double = (value) => {
     return value * 2;
 };
 console.log(double(10));
 //exercise 2 -  Default params
-var greets = function (name) {
-    if (name === void 0) { name = "Rafael"; }
-    console.log("hello " + name);
+const greets = (name = "Rafael") => {
+    console.log(`hello ${name}`);
 };
 greets();
 greets('anaa');
 //exercise 3 - spread Operator
-var numbers1 = [-3, 33, 38, 5];
-console.log(Math.min.apply(Math, numbers1));
+const numbers1 = [-3, 33, 38, 5];
+console.log(Math.min(...numbers1));
 //exercise 4 - spread operator
-var newArray = [55, 20];
-newArray.push.apply(newArray, numbers1);
+const newArray = [55, 20];
+newArray.push(...numbers1);
 console.log(newArray);
 //exercise 5 - 
-var testResults = [3.89, 2.99, 1.38];
-var result1 = testResults[0], result2 = testResults[1], result3 = testResults[2];
+const testResults = [3.89, 2.99, 1.38];
+const [result1, result2, result3] = testResults;
+console.log(result1, result2, result3);
 //exercise 6 
-var scientist = { firstName: "Rafael", experience: 12 };
-var firstName = scientist.firstName, experience = scientist.experience;
+const scientist = { firstName: "Rafael", experience: 12 };
+const { firstName, experience } = scientist;
 console.log(firstName, experience);
